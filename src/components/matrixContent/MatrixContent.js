@@ -427,13 +427,8 @@ export default class MatrixContent extends React.Component {
             if (!closestResistance) return;
 
             if (closestResistance === this.props.matrix.activeResistance) {
-                // If user taps on already selected resistance: Show resistance details
-                this.props.navigation.navigate('Resistance', {
-                    screen: 'ResistanceDetail',
-                    params: {
-                        selectedResistance: closestResistance,
-                    },
-                });
+                // If user taps on already selected resistance, hide it
+                this.props.matrix.setActiveResistance();
             } else {
                 this.props.matrix.setActiveResistance(closestResistance);
             }

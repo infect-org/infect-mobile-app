@@ -31,6 +31,7 @@ export default class ActiveResistanceDetail extends React.Component {
                 style={[
                     styles.container,
                 ]}
+                pointerEvents="none"
             >
                 { this.props.matrix.activeResistance &&
                     <Animated.View
